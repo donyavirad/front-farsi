@@ -34,7 +34,7 @@ export default function Navbar() {
                     <div>
                         <Link href={"/"} className="flex items-center">
                             <img src="./logo.svg" className="w-16" />
-                            <span className="hidden lg:block mr-4 text-lg">فرانت آرت</span>
+                            <span className="hidden lg:block mr-4 text-lg">فرانت به فارسی</span>
                         </Link>
                     </div>
                     <div className="hidden lg:block">
@@ -51,7 +51,7 @@ export default function Navbar() {
                         </ul>
                     </div>
                     <div>
-                        <button className="px-4 py-2 bg-primary text-white rounded-full">پرسش و پاسخ</button>
+                        <button className="px-8 py-2 bg-primary text-white rounded-lg">پرسش و پاسخ</button>
                     </div>
                 </div>
 
