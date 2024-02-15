@@ -28,12 +28,13 @@ export default function Navbar() {
         <div className="py-4 shadow-md">
             <Container>
                 <div className="flex justify-between items-center">
-                    <div className="lg:hidden">
-                        <img className="" src="./menu.svg" alt="منو" onClick={() => setIsOpen(true)} />
+                    <div className="lg:hidden flex items-center">
+                        <img className="h-4" src="./menu.svg" alt="منو" onClick={() => setIsOpen(true)} />
+                        <span className="mr-2">فرانت به فارسی</span>
                     </div>
                     <div>
                         <Link href={"/"} className="flex items-center">
-                            <img src="./logo.svg" className="w-16" />
+                            <img src="./logo.svg" className="h-6" />
                             <span className="hidden lg:block mr-4 text-lg">فرانت به فارسی</span>
                         </Link>
                     </div>
@@ -49,9 +50,6 @@ export default function Navbar() {
                                 <Link className="py-2 transition border-b-2 border-b-white hover:border-b-2 hover:border-gray-600" href={"/blog"}>تماس با ما</Link>
                             </li>
                         </ul>
-                    </div>
-                    <div>
-                        <button className="px-8 py-2 bg-primary text-white rounded-lg">پرسش و پاسخ</button>
                     </div>
                 </div>
 
