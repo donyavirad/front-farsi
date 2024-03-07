@@ -4,21 +4,22 @@ export default function Article() {
     return (
         <div className="py-8">
             <Container>
-                <div className="">
-                    <div className="flex items-center justify-center">
-                        <img className="w-full rounded-2xl lg:w-3/4" src="./front-end.png"/>
-                    </div>
-                    <div className="py-4">
-                        <h1 className="text-2xl text-black">html چیست؟</h1>
-                        <div className="flex space-x-2 space-x-reverse text-gray">
-                            <span>14 مرداد 1402</span>
-                            <span>•</span>
-                            <span>حامد دنیوی راد</span>
+                <div className="grid grid-cols-3">
+                    <div className="col-span-3 lg:col-span-2">
+                        <div className="flex items-center justify-center">
+                            <img className="w-full rounded-2xl" src="./front-end.png" />
                         </div>
-                    </div>
-                    <div>
-                        <p className="text-gray">
-                            {`سلام، این بینگ است. من میتوانم به شما در آموزش و کار با HTML کمک کنم. blush
+                        <div className="py-4">
+                            <h1 className="text-2xl text-black">html چیست؟</h1>
+                            <div className="flex space-x-2 space-x-reverse text-gray">
+                                <span>14 مرداد 1402</span>
+                                <span>•</span>
+                                <span>حامد دنیوی راد</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div className="text-gray">
+                                {`سلام، این بینگ است. من میتوانم به شما در آموزش و کار با HTML کمک کنم. blush
 
 شما درخواست کردید که یک متن 1000 کلمه ای راجب HTML بسازم. من برای شما یک متن آموزشی و جامع دربارهی HTML نوشتهام که امیدوارم برای شما مفید باشد. blush
 
@@ -98,7 +99,8 @@ file:///C:/Users/Ali/Documents/index.html
 •  از قوانین نگارش HTML پیروی کنید. برای مثال، تگها و صفات را به صورت کوچک (lowercase) بنويسيد، تگهايي كه محتوي دارند را ببنديد، صفات را با علامت (=) از مقادير جدا كنيد و مقادير صفات را در كروشه (&quot;) قرار دهيد.
 
 •  از توضيحات (comments) استفاده كنيد. توضيحات به شما كمك ميكنند كه كدهاي خود را بهتر بفهميد و در صورت لزوم تغيير دهيد. توضيحات همچنين به ديگران كمك ميكنند كه كدهاي شما را درك كنند. توضيحات در HTML با استفاده از علامتهاي <!-- و --> نوشت`}
-                        </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </Container>
