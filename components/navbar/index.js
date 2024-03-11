@@ -41,13 +41,13 @@ export default function Navbar() {
                     <div className="hidden lg:block">
                         <ul className="flex ">
                             <li className="px-6 ">
-                                <Link className="py-2 transition border-b-2 border-b-white hover:border-b-2 hover:border-gray-600" href={"/blog"}>مقالات</Link>
+                                <Link className="py-2 transition border-b-2 border-b-white hover:border-b-2 hover:border-gray-600" href={"/"}>مقالات</Link>
                             </li>
                             <li className="px-6">
-                                <Link className="py-2 transition border-b-2 border-b-white hover:border-b-2 hover:border-gray-600" href={"/blog"}>درباره ما</Link>
+                                <Link className="py-2 transition border-b-2 border-b-white hover:border-b-2 hover:border-gray-600" href={"/"}>درباره ما</Link>
                             </li>
                             <li className="px-6">
-                                <Link className="py-2 transition border-b-2 border-b-white hover:border-b-2 hover:border-gray-600" href={"/blog"}>تماس با ما</Link>
+                                <Link className="py-2 transition border-b-2 border-b-white hover:border-b-2 hover:border-gray-600" href={"/"}>تماس با ما</Link>
                             </li>
                         </ul>
                     </div>
@@ -68,13 +68,13 @@ export default function Navbar() {
                         <ul>
                             <li className="py-2">
                                 {" "}
-                                <Link href={"/blog"}>مقالات</Link>
+                                <Link href={"/"}>مقالات</Link>
                             </li>
                             <li className="py-2">
-                                <Link href={"/blog"}>درباره ما</Link>
+                                <Link href={"/"}>درباره ما</Link>
                             </li>
                             <li className="py-2">
-                                <Link href={"/blog"}>تماس با ما</Link>
+                                <Link href={"/"}>تماس با ما</Link>
                             </li>
                         </ul>
                     </div>
