@@ -1,21 +1,21 @@
 import Container from "@/components/UI/container";
 import { supabase } from "../db/supabase";
 import { timeHandler } from "@/hooks/time";
-
+import LastArticleSidbar from "@/components/sidebar/LastArticleSidbar";
 
 const fetchArticles = async (id) => {
-    const res = await supabase.from("weblog").select("*").eq("id",id)
+    const res = await supabase.from("weblog").select("*").eq("id", id);
     return res;
 };
 
 export default async function Article(props) {
-    const data = (await fetchArticles(props.params.articleId)).data[0]
+    const data = (await fetchArticles(props.params.articleId)).data[0];
 
     return (
         <div className="py-8">
             <Container>
-                <div className="grid grid-cols-3">
-                    <div className="col-span-3 lg:col-span-2">
+                <div className="grid grid-cols-3 gap-8">
+                    <div className="grid-cols-3 lg:col-span-2">
                         <div className="flex items-center justify-center">
                             <img className="w-full rounded-2xl h-96 object-cover" src={data.imageArticle.link} />
                         </div>
@@ -26,12 +26,16 @@ export default async function Article(props) {
                             </div>
                         </div>
                         <div>
-                            <div className="text-gray" dangerouslySetInnerHTML={{
-                                __html: data.content
-                            }}>
-                                
-                            </div>
+                            <div
+                                className="text-gray"
+                                dangerouslySetInnerHTML={{
+                                    __html: data.content,
+                                }}
+                            ></div>
                         </div>
+                    </div>
+                    <div className="col-span-1">
+                        <LastArticleSidbar/>
                     </div>
                 </div>
             </Container>
@@ -41,20 +45,18 @@ export default async function Article(props) {
 
 export async function generateMetadata({ params, searchParams }, parent) {
     // read route params
-    const id = params.articleId
-   
+    const id = params.articleId;
+
     // fetch data
-    const res = (await supabase.from("weblog").select("*").eq("id",id)).data[0]
-   
-   
+    const res = (await supabase.from("weblog").select("*").eq("id", id)).data[0];
+
     return {
-      title: res.title,
-      description: res.abstract,
-      openGraph: {
-        images: [res.imageArticle.link],
-      },
-    }
-  }
+        title: res.title,
+        description: res.abstract,
+        openGraph: {
+            images: [res.imageArticle.link],
+        },
+    };
+}
 
-export const revalidate = 600
-
+export const revalidate = 5;

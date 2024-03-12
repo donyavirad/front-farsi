@@ -4,7 +4,7 @@ export const metadata = {
   description: 'در این سایت می توانید مقالاتی درباره ی فرانت اند و برنامه نویسی بخوانید. و اگر سوالی دارید در قسمت پرسش و پاسخ بپرسید.',
 }
 
-export const revalidate = 3600
+export const revalidate = 5
 
 export default function RootLayout({ children }) {
   return (
