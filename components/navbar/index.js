@@ -34,7 +34,7 @@ export default function Navbar() {
                     </div>
                     <div>
                         <Link href={"/"} className="flex items-center">
-                            <img src="./logo.svg" className="h-6" />
+                            <img src="./logo.svg" alt="لوگو" className="h-6" />
                             <span className="hidden lg:block mr-4 text-lg">فرانت به فارسی</span>
                         </Link>
                     </div>
@@ -56,14 +56,13 @@ export default function Navbar() {
                 <motion.div
                     initial={{ opacity: 0, x: "100%", backdropFilter: "blur(0)" }}
                     animate={isOpen ? { opacity: 1, x: 0, backdropFilter: "blur(16px)" } : {}}
-                    duration={2}
                     onClick={() => setIsOpen(false)}
                     className="fixed top-0 right-0 w-full h-full bg-gray-300 bg-opacity-30 "
                 ></motion.div>
                 <motion.div initial={{ x: "100%", opacity: 0 }} animate={isOpen ? { x: "0", opacity: 1 } : {}} className="fixed top-0 right-0 w-96 h-full bg-white z-10">
                     <div className="py-6 px-4">
                         <div>
-                            <img onClick={() => setIsOpen(false)} className="w-6 py-4" src="./close.svg" />
+                            <img onClick={() => setIsOpen(false)} alt="" className="w-6 py-4" src="./close.svg" />
                         </div>
                         <ul>
                             <li className="py-2">

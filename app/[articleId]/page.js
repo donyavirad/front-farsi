@@ -1,5 +1,4 @@
 import Container from "@/components/UI/container";
-import { data } from "autoprefixer";
 import { supabase } from "../db/supabase";
 import { timeHandler } from "@/hooks/time";
 
@@ -57,5 +56,5 @@ export async function generateMetadata({ params, searchParams }, parent) {
     }
   }
 
-export const revalidate = 5
+export const revalidate = 600
 
