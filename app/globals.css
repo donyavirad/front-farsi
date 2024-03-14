@@ -4,12 +4,12 @@
 
 @layer base {
     @font-face {
-        font-family: Byekan;
-        src: url(/font/BYekan.ttf);
+        font-family: Vazir;
+        src: url(/font/Vazir.ttf);
     }
 }
 
 
 * {
-    font-family: Byekan;
+    font-family: Vazir;
 }
