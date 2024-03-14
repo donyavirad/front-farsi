@@ -5,25 +5,7 @@ import { useState } from "react";
 import Link from "next/link";
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
-    const containerannimate = {
-        hidden: { opacity: 1, scale: 0 },
-        visible: {
-            opacity: 1,
-            scale: 1,
-            transition: {
-                delayChildren: 0.3,
-                staggerChildren: 0.2,
-            },
-        },
-    };
 
-    const item = {
-        hidden: { y: 20, opacity: 0 },
-        visible: {
-            y: 0,
-            opacity: 1,
-        },
-    };
     return (
         <div className="py-4 shadow-md">
             <Container>
@@ -70,7 +52,7 @@ export default function Navbar() {
                             <img alt="" className="w-4 h-4" src="./close.svg" />
                         </div>
                         <ul className="bg-white rounded-lg">
-                            <li className="py-2 px-2 border-b  border-slate-100">
+                            <li className="py-2 px-2 border-b  border-slate-200">
                                 {" "}
                                 <Link href={"/"}>مقالات</Link>
                             </li>
