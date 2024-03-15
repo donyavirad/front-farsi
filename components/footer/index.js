@@ -6,7 +6,7 @@ const Footer = () => {
         <Container>
             <div>
                 <p>
-                    تمامی حقوق محفوظ است. <span className="text-gray">فرانت به فارسی</span>
+                    تمامی حقوق محفوظ است. <span className="text-slate-500">فرانت به فارسی</span>
                 </p>
             </div>
         </Container>

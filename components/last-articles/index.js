@@ -13,7 +13,7 @@ export default async function LastArticles() {
             <Container>
                 <div>
                     <h2 className="text-2xl mb-4">آخرین مقالات</h2>
-                    <div className="grid grid-cols-1 gap-y-8 md:gap-4 md:grid-cols-2 lg:grid-cols-3">
+                    <div className="grid grid-cols-1 gap-y-8 md:gap-8 md:grid-cols-2 lg:grid-cols-3">
                         {data.map((item) => (
                             <div key={item.id}>
                                 <Card id={item.id} title={item.title} abstract={item.abstract} time={item.updated_at} image={item.imageArticle.link} alt={item.imageArticle.alt} />
