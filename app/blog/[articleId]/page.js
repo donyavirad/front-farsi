@@ -1,5 +1,5 @@
 import Container from "@/components/UI/container";
-import { supabase } from "../db/supabase";
+import { supabase } from "../../db/supabase";
 import { timeHandler } from "@/hooks/time";
 import LastArticleSidbar from "@/components/sidebar/LastArticleSidbar";
 
