@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Card({ title, abstract, image, alt, time, id }) {
     return (
         <div className="relative flex flex-col space-y-2 bg-white border border-slate-200 rounded-lg overflow-hidden transition duration-300 hover:scale-105 hover:border-slate-400" >
-            <Link href={"/" + id}>
+            <Link href={"/blog/" + id}>
                 <Image
                     src={image}
                     priority
