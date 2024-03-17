@@ -37,7 +37,7 @@ transform-origin: center;
         .gear-white{
             transform-box: fill-box;
             transform-origin: center;
-            animation: gear-white 3s ease-in-out infinite;
+            animation: gear-white 5s linear infinite;
         }
       .cls-1 {
         isolation: isolate;
