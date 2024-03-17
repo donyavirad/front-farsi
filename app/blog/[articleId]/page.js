@@ -1,7 +1,6 @@
 import Container from "@/components/UI/container";
 import { supabase } from "../../db/supabase";
 import { timeHandler } from "@/hooks/time";
-import LastArticleSidbar from "@/components/sidebar/LastArticleSidbar";
 import Link from "next/link";
 const fetchArticles = async (id) => {
     const res = await supabase.from("weblog").select("*").eq("id", id);
@@ -13,8 +12,8 @@ export default async function Article(props) {
     return (
         <div className="py-8">
             <Container>
-                <div className="grid grid-cols-3 gap-8">
-                    <div className="grid-cols-3 lg:col-span-2">
+                <div className="w-full flex items-center justify-center ">
+                    <div className="w-full lg:w-2/3">
                         <div className="flex items-center justify-center">
                             <img className="w-full rounded-2xl h-96 object-cover" src={data.imageArticle.link} />
                         </div>
@@ -40,9 +39,6 @@ export default async function Article(props) {
                                 ))}
                             </div>
                         </div>
-                    </div>
-                    <div className="col-span-1">
-                        <LastArticleSidbar />
                     </div>
                 </div>
             </Container>
