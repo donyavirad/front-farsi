@@ -1,18 +1,20 @@
-import React from "react";
+import React from 'react'
 import Container from "@/components/UI/container";
-import { supabase } from "../db/supabase";
+import { supabase } from "@/app/db/supabase";
 import Card from "@/components/UI/card";
-const fetchArticles = async () => {
-    const res = await supabase.from("weblog").select("id,title,abstract,updated_at,imageArticle").eq("published", true).order("created_at", { ascending: false });
+
+const fetchArticles = async (search) => {
+    const res = await supabase.from("weblog").select("id,title,abstract,updated_at,imageArticle,tags").eq("published", true).or(`title.like.%${search}%,abstract.like.%${search}%,tags.cs.{${search}}`).order("created_at", { ascending: false }); 
     return res;
-};
-const Blog = async () => {
-    const data = (await fetchArticles()).data;
+}; 
+const SearchPage = async (props) => {
+    const data = (await fetchArticles(props.searchParams.value)).data;
+    
     return (
         <Container>
             <div>
                 <div className="py-16">
-                    <h1 className="text-4xl text-center">مقالات</h1>
+                    <h1 className="text-4xl text-center">جستوجو برای: {props.searchParams.value}</h1>
                 </div>
                 <div className="grid grid-cols-1 gap-y-8 md:gap-8 md:grid-cols-2 lg:grid-cols-3 pb-16">
                     {data.map((item) => (
@@ -24,6 +26,6 @@ const Blog = async () => {
             </div>
         </Container>
     );
-};
+}
 
-export default Blog;
+export default SearchPage
