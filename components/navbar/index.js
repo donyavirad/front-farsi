@@ -29,7 +29,7 @@ export default function Navbar() {
                                     </Link>
                                 </li>
                                 <li className="px-6">
-                                    <Link className="py-2 transition border-b-2 border-b-white hover:border-b-2 hover:border-gray-600" href={"/"}>
+                                    <Link className="py-2 transition border-b-2 border-b-white hover:border-b-2 hover:border-gray-600" href={"/about-me"}>
                                         درباره من
                                     </Link>
                                 </li>
@@ -55,10 +55,10 @@ export default function Navbar() {
                             <ul className="bg-white rounded-lg">
                                 <li className="py-2 px-2 border-b  border-slate-200">
                                     {" "}
-                                    <Link href={"/"}>مقالات</Link>
+                                    <Link href={"/blog/"}>مقالات</Link>
                                 </li>
                                 <li className="py-2 px-2">
-                                    <Link href={"/"}>درباره من</Link>
+                                    <Link href={"/about-me"}>درباره من</Link>
                                 </li>
                             </ul>
                         </div>
