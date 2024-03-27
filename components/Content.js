@@ -5,7 +5,7 @@ import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
 const Content = async (props) => {
     const data = props.content;
     const blocks = data.blocks;
-    let htmlData = [];
+    let htmlData = []; 
 
     blocks.map((item) => {
         switch (item.type) {
