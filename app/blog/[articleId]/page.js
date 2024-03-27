@@ -1,4 +1,3 @@
-import "@/app/blog/[articleId]/article.css"
 import Container from "@/components/UI/container";
 import { supabase } from "../../db/supabase";
 import { timeHandler } from "@/hooks/time";

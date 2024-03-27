@@ -5,14 +5,12 @@ import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
 const Content = async (props) => {
     const data = props.content;
     const blocks = data.blocks;
-    console.log(blocks);
     let htmlData = [];
 
     blocks.map((item) => {
-        console.log(item);
         switch (item.type) {
             case "paragraph":
-                htmlData.push(<p dangerouslySetInnerHTML={{
+                htmlData.push(<p key={item.id} dangerouslySetInnerHTML={{
                     __html: item.data.text
                 }}></p>);
                 break;
@@ -20,20 +18,20 @@ const Content = async (props) => {
                 const level = item.data.level;
                 switch (level) {
                     case 2:
-                        htmlData.push(<h2>{item.data.text}</h2>);
+                        htmlData.push(<h2  key={item.id} className="text-3xl font-bold">{item.data.text}</h2>);
                         break;
                     case 3:
-                        htmlData.push(<h3>{item.data.text}</h3>);
+                        htmlData.push(<h3  key={item.id} className="text-2xl font-bold">{item.data.text}</h3>);
                         break;
                     case 4:
-                        htmlData.push(<h4>{item.data.text}</h4>);
+                        htmlData.push(<h4  key={item.id} className="text-xl font-bold">{item.data.text}</h4>);
                         break;
                 }
                 break;
             case "list":
                 const items = item.data.items;
                 const list = (
-                    <ul>
+                    <ul  key={item.id} className="list-disc pr-4">
                         {items.map((li, key) => (
                             <li key={key}>{li}</li>
                         ))}
@@ -43,18 +41,18 @@ const Content = async (props) => {
                 break;
             case "code":
                 htmlData.push(
-                    <SyntaxHighlighter language="javascript" style={docco} >
+                    <SyntaxHighlighter key={item.id} language="javascript" style={docco} customStyle={{direction: "ltr", padding: "16px 32px",borderRadius: "8px"}} >
                         {item.data.code}
                     </SyntaxHighlighter>
                 );
                 break;
             case "image":
-                htmlData.push(<img className="w-full rounded-lg" src={item.data.file.url} alt={item.data.caption} />);
+                htmlData.push(<img  key={item.id} className="w-full rounded-lg" src={item.data.file.url} alt={item.data.caption} />);
                 break
         }
     });
 
-    return <div className="space-y-2 mb-4">{htmlData}</div>;
+    return <div className="space-y-4 mb-4">{htmlData}</div>;
 };
 
 export default Content;
