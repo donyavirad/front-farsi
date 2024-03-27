@@ -9,7 +9,7 @@ export default async function LastArticles() {
     };
     const data = (await fetchArticles()).data;
     return (
-        <div className="mb-8">
+        <div>
             <Container>
                 <div>
                     <div className="flex justify-between">
