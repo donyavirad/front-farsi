@@ -54,7 +54,11 @@ export async function generateMetadata({ params, searchParams }, parent) {
         title: res.title,
         description: res.abstract,
         openGraph: {
-            images: [res.imageArticle.link],
+            images: [{
+                url: res.imageArticle.link,
+                width: 400,
+                height: 300,
+            }],
         },
     };
 }

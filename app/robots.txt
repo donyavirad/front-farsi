@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+Disallow: /admin/
+Sitemap: https://front-farsi.netlify.app/sitemap.xml
