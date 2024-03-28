@@ -3,6 +3,11 @@ import Link from "next/link";
 import React from "react";
 import Image from "next/image"
 import profile from "../../public/profile.jpg"
+
+export const metadata = {
+    title: "سایت فرانت به فارسی | درباره من"
+}
+
 const AboutPage = () => {
     return (
         <div className="py-16">

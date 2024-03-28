@@ -2,6 +2,11 @@ import React from "react";
 import Container from "@/components/UI/container";
 import { supabase } from "../db/supabase";
 import Card from "@/components/UI/card";
+
+export const metadata = {
+    title: "سایت فرانت به فارسی | همه مقالات"
+}
+
 const fetchArticles = async () => {
     const res = await supabase.from("weblog").select("id,title,abstract,updated_at,imageArticle").eq("published", true).order("created_at", { ascending: false });
     return res;

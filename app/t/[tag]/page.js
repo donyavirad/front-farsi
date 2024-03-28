@@ -37,7 +37,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
     const tag = params.tag;
 
     return {
-        title: tag,
+        title: `سایت فرانت به فارسی | ${tag}`,
     };
 }
 

@@ -28,4 +28,8 @@ const SearchPage = async (props) => {
     );
 }
 
+export const metadata = {
+    robots: "noindex"
+}
+
 export default SearchPage
