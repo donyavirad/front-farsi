@@ -8,6 +8,9 @@ const nextConfig = {
                 port: ""
             }
         ]
+    },
+    experimental: {
+        appDir: true,
     }
 }
 
