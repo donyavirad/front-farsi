@@ -3,6 +3,10 @@ import Container from "../UI/container";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import Link from "next/link";
+import logo from "../../public/logo.svg"
+import menu from "../../public/menu.svg"
+import close from "../../public/close.svg"
+import Image from "next/image"
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -12,12 +16,12 @@ export default function Navbar() {
                 <Container>
                     <div className="flex justify-between items-center">
                         <div className="lg:hidden flex items-center">
-                            <img className="h-4" src="./menu.svg" alt="منو" onClick={() => setIsOpen(true)} />
+                            <Image className="w-6" src={menu} alt="منو" onClick={() => setIsOpen(true)} />
                             <span className="mr-2">فرانت به فارسی</span>
                         </div>
                         <div>
                             <Link href={"/"} className="flex items-center">
-                                <img src="./logo.svg" alt="لوگو" className="h-6" />
+                                <Image src={logo} alt="لوگو" className="h-6 w-6" />
                                 <span className="hidden lg:block mr-4 text-lg">فرانت به فارسی</span>
                             </Link>
                         </div>
@@ -50,7 +54,7 @@ export default function Navbar() {
                     >
                         <div className="py-6 px-4">
                             <div onClick={() => setIsOpen(false)} className="flex items-center w-fit bg-white p-2 mb-2 rounded-lg">
-                                <img alt="" className="w-4 h-4" src="./close.svg" />
+                                <Image alt="" className="w-4 h-4" src={close} />
                             </div>
                             <ul className="bg-white rounded-lg">
                                 <li className="py-2 px-2 border-b  border-slate-200">
