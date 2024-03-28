@@ -2,7 +2,7 @@ import Container from "@/components/UI/container";
 import Link from "next/link";
 import React from "react";
 import Image from "next/image"
-import profile from "../../public/profile.jpg"
+import profile from "@/public/profile.jpg"
 
 export const metadata = {
     title: "سایت فرانت به فارسی | درباره من"
