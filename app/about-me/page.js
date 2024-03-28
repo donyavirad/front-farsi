@@ -14,7 +14,7 @@ const AboutPage = () => {
             <Container>
                 <div className="flex flex-col md:flex-row items-center">
                     <div className="flex flex-col items-center w-full md:w-1/3 mb-4 md:ml-8">
-                        <Image className=" w-1/3 md:w-full object-cover rounded-full" src={profile} />
+                        <Image className=" w-1/3 md:w-full object-cover rounded-full" src={profile} alt="حامد دنیوی راد" />
                         <div className="py-2">
                             <p>
                                 ایمیل: <Link className="underline" href={"mailto:hameddonyavi@gmail.com"}>hameddonyavi@gmail.com</Link>
