@@ -1,14 +1,15 @@
 import Container from "@/components/UI/container";
 import Link from "next/link";
 import React from "react";
-
+import Image from "next/image"
+import profile from "../../public/profile.jpg"
 const AboutPage = () => {
     return (
         <div className="py-16">
             <Container>
                 <div className="flex flex-col md:flex-row items-center">
                     <div className="flex flex-col items-center w-full md:w-1/3 mb-4 md:ml-8">
-                        <img className=" w-1/3 md:w-full object-cover rounded-full" src="./profile.jpg" />
+                        <Image className=" w-1/3 md:w-full object-cover rounded-full" src={profile} />
                         <div className="py-2">
                             <p>
                                 ایمیل: <Link className="underline" href={"mailto:hameddonyavi@gmail.com"}>hameddonyavi@gmail.com</Link>
