@@ -1,45 +1,46 @@
 import Container from "@/components/UI/container";
 import Link from "next/link";
 import React from "react";
-import Image from "next/image"
-import profile from "@/public/profile.jpg"
+import Image from "next/image";
+import profile from "@/public/profile.jpg";
+import email from "@/public/email.svg";
+import linkedin from "@/public/linkedin.svg";
+import github from "@/public/github.svg";
+import bluetik from "@/public/bluetik.svg";
+import background from "@/public/background.jpg";
 
 export const metadata = {
-    title: "سایت فرانت به فارسی | درباره من"
-}
+    title: "سایت فرانت به فارسی | درباره من",
+};
 
 const AboutPage = () => {
     return (
         <div className="py-16">
             <Container>
-                <div className="flex flex-col md:flex-row items-center">
-                    <div className="flex flex-col items-center w-full md:w-1/3 mb-4 md:ml-8">
-                        <Image className=" w-1/3 md:w-full object-cover rounded-full" src={profile} alt="حامد دنیوی راد" />
-                        <div className="py-2">
-                            <p>
-                                ایمیل: <Link className="underline" href={"mailto:hameddonyavi@gmail.com"}>hameddonyavi@gmail.com</Link>
-                            </p>
+                <div className="flex flex-col items-center">
+                    <div className="flex flex-col items-center w-full ">
+                        <div className="relative mb-20">
+                            <Image src={background} alt="" className="rounded-lg md:aspect-5/1 lg:aspect-8/1" />
+                            <Image className="absolute top-[100%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-40 object-cover rounded-full border-8 border-white" src={profile} alt="حامد دنیوی راد" />
                         </div>
-                        <div>
-                            <p>گیت هاب: <Link className="underline" target="_blank" href={"https://github.com/donyavirad"}>@donyavirad</Link></p>
+                        <div className=" flex flex-col items-center w-fit bg-white px-4 py-2 rounded-lg shadow-lg ">
+                            <div className="flex items-center">
+                                <h1 className="">حامد دنیوی راد</h1>
+                                <Image className="w-4 mr-2" src={bluetik} alt=""/> 
+                            </div>
+                            <span className="text-slate-500 mb-2">توسعه دهنده فرانت اند</span>
+                            <div className="flex justify-between w-full">
+                                <Link href={"mailto:hameddonyavi@gmail.com"}>
+                                    <Image className="w-6" src={email} alt=""/>
+                                </Link>
+                                <Link href={"https://github.com/donyavirad"} target="_blank">
+                                    <Image className="w-6" src={github} alt=""/>
+                                </Link>
+                                <Link href={"https://www.linkedin.com/in/hamed-donyavi/"} target="_blank">
+                                    <Image className="w-6" src={linkedin} alt=""/>
+                                </Link>
+                            </div>
                         </div>
-                    </div>
-                    <div className="">
-                        <h1 className="text-4xl mb-2">
-                            حامد دنیوی راد <span className="text-cyan-600">توسعه دهنده فرانت اند</span>
-                        </h1>
-                        <p>
-                            سلام، من یک برنامه‌نویس فرانت‌اند هستم با تجربه چند ساله در زمینه توسعه وب. من تسلط کامل به HTML, CSS, و JavaScript دارم و با فریمورک‌های مدرنی مانند React.js کار کرده‌ام.
-                        </p>
-                        <p>
-                            من توانایی طراحی و پیاده‌سازی رابط کاربری پاسخگو و کاربرپسند را دارم و همیشه به دنبال بهبود تجربه کاربر هستم. من با اصول UX و UI آشنا هستم و می‌توانم با تیم طراحی محصول
-                            همکاری کنم تا محصولاتی با کیفیت بالا ارائه دهیم.
-                        </p>
-                        <p>
-                            همچنین، من با ابزارهای توسعه مدرن مانند Git, Webpack و Babel آشنا هستم و می‌توانم به صورت موثر در محیط‌های تیمی کار کنم. من به توسعه مداوم مهارت‌هایم اعتقاد دارم و همیشه به
-                            دنبال یادگیری تکنولوژی‌های جدید هستم.
-                        </p>
-                        <p>با توجه به تجربیات و مهارت‌هایم، من اعتقاد دارم که می‌توانم به تیم شما کمک کنم تا محصولات با کیفیت بالا را ارائه دهید.</p>
                     </div>
                 </div>
             </Container>

@@ -26,7 +26,14 @@ module.exports = {
             blue: "#7b90c7",
             "blue-light": "#e4f0ff",
 
-        }
+        },
+        backgroundImage: {
+            "profile": "url('/background.jpg')"
+        },
+        aspectRatio: {
+            '5/1': '5 / 1',
+            '8/1': '8 / 1',
+          },
     },
   },
   plugins: [],
