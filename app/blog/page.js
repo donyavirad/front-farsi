@@ -4,7 +4,10 @@ import { supabase } from "../db/supabase";
 import Card from "@/components/UI/card";
 
 export const metadata = {
-    title: "سایت فرانت به فارسی | همه مقالات"
+    title: "سایت فرانت به فارسی | همه مقالات",
+    alternates: {
+        canonical: "/blog",
+    },
 }
 
 const fetchArticles = async () => {

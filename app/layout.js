@@ -2,7 +2,7 @@ import Navbar from "@/components/navbar";
 import "./globals.css";
 import Footer from "@/components/footer";
 export const metadata = {
-    metadataBase: new URL("https://front-farsi.netlify.app"),
+    metadataBase: new URL("https://front-farsi.vercel.app"),
     title: "سایت فرانت به فارسی | مقالات برنامه نویسی فرانت اند",
     description: "در این سایت می توانید مقالاتی درباره ی فرانت اند و برنامه نویسی بخوانید. و اگر سوالی دارید در قسمت پرسش و پاسخ بپرسید.",
     generator: 'Next.js',

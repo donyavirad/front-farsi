@@ -75,6 +75,9 @@ export async function generateMetadata({ params, searchParams }, parent) {
                 },
             ],
         },
+        alternates: {
+            canonical: `/blog/${id}`,
+        },
     };
 }
 

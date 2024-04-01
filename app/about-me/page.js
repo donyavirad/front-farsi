@@ -11,6 +11,9 @@ import background from "@/public/background.jpg";
 
 export const metadata = {
     title: "سایت فرانت به فارسی | درباره من",
+    alternates: {
+        canonical: "/about-me",
+    },
 };
 
 const AboutPage = () => {

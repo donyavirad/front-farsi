@@ -38,6 +38,9 @@ export async function generateMetadata({ params, searchParams }, parent) {
 
     return {
         title: `سایت فرانت به فارسی | ${tag}`,
+        alternates: {
+            canonical: `/t/${tag}`,
+        },
     };
 }
 
