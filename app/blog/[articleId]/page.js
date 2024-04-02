@@ -68,6 +68,10 @@ export async function generateMetadata({ params, searchParams }, parent) {
         description: res.abstract,
         openGraph: {
             title: res.title,
+            description: res.description,
+            url: "/",
+            siteName: 'فرانت فارسی',
+            type: 'website',
             images: [
                 {
                     url: res.imageArticle.link,
