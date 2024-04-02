@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function Home() {
     return (
-        <div className="py-16 space-y-8">
+        <div className="py-8 lg:py-16 space-y-8">
             <Hero />
             <LastArticles />
         </div>

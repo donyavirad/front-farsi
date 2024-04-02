@@ -14,7 +14,7 @@ export default function Hero() {
                             <Search />
                         </div>
                     </div>
-                    <div className="w-full lg:w-1/2 order-1 lg:order-2  flex items-center justify-center">
+                    <div className="w-full lg:w-1/2 order-1 lg:order-2  flex items-center justify-center mb-8 lg:m-0">
                         <img className="w-full" src="./hero.svg"/>
                     </div>
                 </div>
