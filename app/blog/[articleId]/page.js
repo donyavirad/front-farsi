@@ -6,7 +6,8 @@ import Image from "next/image";
 import Content from "@/components/Content";
 import { Suspense } from "react";
 const fetchArticles = async (id) => {
-    const res = await supabase.from("weblog").select("*").eq("id", id);
+    const res = await supabase.from("weblog").select("*").eq("id", id).eq("published", true);
+    console.log(res);
     return res;
 };
 
@@ -86,4 +87,4 @@ export async function generateMetadata({ params, searchParams }, parent) {
     };
 }
 
-export const revalidate = 5;
+export const revalidate = 3600;
