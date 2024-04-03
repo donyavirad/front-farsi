@@ -31,6 +31,7 @@ export default async function Article(props) {
                                         width={800}
                                         height={500}
                                         sizes="(min-width: 1024px) 75vw, 100vw"
+                                        alt={data.imageArticle.alt}
                                         style={{
                                             width: "100%",
                                             height: "auto",
