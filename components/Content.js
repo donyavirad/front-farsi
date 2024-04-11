@@ -1,12 +1,13 @@
 "use client";
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import Image from "next/image";
 const Content = async (props) => {
     const data = props.content;
     const blocks = data.blocks;
+    console.log(blocks);
     let htmlData = [];
-
+    console.log(blocks);
     blocks.map((item) => {
         switch (item.type) {
             case "paragraph":
@@ -59,7 +60,7 @@ const Content = async (props) => {
                 break;
             case "code":
                 htmlData.push(
-                    <SyntaxHighlighter key={item.id} language="javascript" style={docco} customStyle={{ direction: "ltr", padding: "16px 32px", borderRadius: "8px" }}>
+                    <SyntaxHighlighter key={item.id} language={item.data.language} style={atomOneDark} customStyle={{ direction: "ltr", padding: "16px 32px", borderRadius: "8px" }}>
                         {item.data.code}
                     </SyntaxHighlighter>
                 );
