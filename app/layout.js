@@ -20,6 +20,7 @@ export const metadata = {
     verification: {
         google: "XJ-Hr8gOi4mIdPXl-vom41aMXFkAGyNzHcbTsuVCVJQ"
     },
+    robots: "index,follow",
 };
 
 export const revalidate = 5;
