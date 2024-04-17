@@ -12,7 +12,7 @@ export default function Navbar() {
 
     return (
         <header>
-            <div className="py-4 shadow-md">
+            <nav className="py-4 shadow-md">
                 <Container>
                     <div className="flex justify-between items-center">
                         <div className="lg:hidden flex items-center">
@@ -68,7 +68,7 @@ export default function Navbar() {
                         </div>
                     </motion.div>
                 </Container>
-            </div>
+            </nav>
         </header>
     );
 }

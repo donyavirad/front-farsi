@@ -20,7 +20,7 @@ export default async function Article(props) {
         return (
             <div className="py-8">
                 <Container>
-                    <div className="w-full flex items-center justify-center ">
+                    <main className="w-full flex items-center justify-center ">
                         <Suspense fallback={<p>در حال بارگذاری...</p>}>
                             <div className="w-full space-y-8 lg:w-2/3">
                                 <div className="flex items-center justify-center">
@@ -56,7 +56,7 @@ export default async function Article(props) {
                                 </div>
                             </div>
                         </Suspense>
-                    </div>
+                    </main>
                 </Container>
             </div>
         );
