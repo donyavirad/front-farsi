@@ -12,7 +12,6 @@ const fetchArticles = async (id) => {
 };
 
 export default async function Article(props) {
-    //console.log(props);
     const response = await fetchArticles(props.params.articleId)
     if(response.error) {
         return notFound()
@@ -73,28 +72,33 @@ export async function generateMetadata({ params, searchParams }, parent) {
     if(resonse.error) {
         return notFound()
     } else {
-        const res = resonse.data[0]
-        return {
-            title: res.title,
-            description: res.abstract,
-            openGraph: {
+        const data = resonse.data
+        if(data[0]) {
+            const res = data[0]
+            return {
                 title: res.title,
-                description: res.description,
-                url: "/",
-                siteName: 'فرانت فارسی',
-                type: 'website',
-                images: [
-                    {
-                        url: res.imageArticle.link,
-                        width: 400,
-                        height: 300,
-                    },
-                ],
-            },
-            alternates: {
-                canonical: `/blog/${id}`,
-            },
-        };
+                description: res.abstract,
+                openGraph: {
+                    title: res.title,
+                    description: res.description,
+                    url: "/",
+                    siteName: 'فرانت فارسی',
+                    type: 'website',
+                    images: [
+                        {
+                            url: res.imageArticle.link,
+                            width: 400,
+                            height: 300,
+                        },
+                    ],
+                },
+                alternates: {
+                    canonical: `/blog/${id}`,
+                },
+            };
+        } else {
+            return notFound()
+        }
     }
 }
 
